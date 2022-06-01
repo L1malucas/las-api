@@ -15,6 +15,6 @@ const localConfig = {
   database: DBNAME || "las",
 };
 
-const pool = mysql.createPool(process.env.DATABASE_URL || localConfig);
+const pool = mysql.createPool(process.env.CLEARDB_DATABASE_URL || localConfig);
 
 module.exports = pool;
