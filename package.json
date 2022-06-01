@@ -45,6 +45,7 @@
     "lint"
   ],
   "jest": {
+    "testResultsProcessor": "jest-sonar-reporter",
     "collectCoverage": true,
     "collectCoverageFrom": [
       "./src/**"
