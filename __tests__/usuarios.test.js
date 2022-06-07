@@ -32,11 +32,11 @@ describe("API de Usuários", () => {
       nome: "nome",
       urlFotoPerfil: "https://randomuser.me/api/portraits/men/91.jpg",
     });
-    expect(res.body).toEqual({
+    expect(res.body).toEqual([{
       id: 99,
       nome: "nome",
       urlFotoPerfil: "https://randomuser.me/api/portraits/men/91.jpg",
-    });
+    }]);
   });
   test("Valida POST Nome Inválido ou Repetido", async () => {
     const resNomeInvalido = await request.post("/usuarios").send({

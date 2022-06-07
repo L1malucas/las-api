@@ -18,7 +18,7 @@ class Eventos {
     );
 
     if (!dataEventoEhValida) {
-      return new Promise((resolve, reject) =>
+      return new Promise((reject) =>
         reject({ erro: "Evento com datas inválidas" })
       );
     }
@@ -48,7 +48,7 @@ class Eventos {
       case STATUS_FINALIZADO:
         return repositorio.buscarEventosFinalizado();
       default:
-        return new Promise((resolve, reject) =>
+        return new Promise((reject) =>
           reject({ erro: `O Status ${status} não é válido` })
         );
     }
@@ -59,10 +59,10 @@ class Eventos {
     const dataInicioEvento = moment(dataInicio).format("YYYY-MM-DD");
     const dataFimEvento = moment(dataFim).format("YYYY-MM-DD");
 
-    const dataEventoEhValida =
+    return (
       moment(dataInicioEvento).isSameOrAfter(dataCriacao) &&
-      moment(dataFimEvento).isSameOrAfter(dataInicioEvento);
-    return dataEventoEhValida;
+      moment(dataFimEvento).isSameOrAfter(dataInicioEvento)
+    );
   }
 
   insereStatusNoEvento(evento) {

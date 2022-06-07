@@ -1,7 +1,7 @@
 const UFs = require("../models/UF's");
 
 module.exports = (app) => {
-  app.get("/ufs", (req, res) => {
+  app.get("/ufs", (_req, res) => {
     UFs.listar()
       .then((resultados) => res.status(200).json(resultados))
       .catch((erros) => res.status(400).json(erros));

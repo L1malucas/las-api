@@ -1,7 +1,7 @@
 const Usuarios = require("../models/usuarios");
 
 module.exports = (app) => {
-  app.get("/usuarios", (req, res) => {
+  app.get("/usuarios", (_req, res) => {
     Usuarios.listar()
       .then((resultados) => res.status(200).json(resultados))
       .catch((erros) => res.status(400).json(erros));
@@ -95,7 +95,7 @@ module.exports = (app) => {
   app.put("/usuarios/:id/endereco", (req, res) => {
     const id = parseInt(req.params.id);
     const valores = req.body;
-    Usuarios.alterarContatos(id, valores)
+    Usuarios.alterarEndereco(id, valores)
       .then((resultados) =>
         resultados ? res.json(valores) : res.status(404).end()
       )

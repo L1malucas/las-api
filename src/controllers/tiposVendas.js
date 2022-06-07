@@ -1,7 +1,7 @@
 const tiposVendas = require("../models/tiposVendas");
 
 module.exports = (app) => {
-  app.get("/tipos-vendas", (req, res) => {
+  app.get("/tipos-vendas", (_req, res) => {
     tiposVendas
       .listar()
       .then((resultados) => res.status(200).json(resultados))
