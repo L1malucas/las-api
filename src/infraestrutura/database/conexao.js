@@ -10,7 +10,7 @@ const localConfig = {
   connectionLimit: 100,
   host: DBHOST || "localhost",
   port: DBPORT || 3306,
-  user: DBUSER || "lucas",
+  user: DBUSER || "las",
   password: DBPASS || "admin123",
   database: DBNAME || "las",
 };
