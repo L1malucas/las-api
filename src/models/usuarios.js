@@ -109,7 +109,11 @@ class Usuarios {
         return false;
       }
       const response = await fetch(url);
-      return response.status !== 200;
+      if (response.status !== 200) {
+        return false;
+      } else {
+        return true;
+      }
     } catch {
       return false;
     }
