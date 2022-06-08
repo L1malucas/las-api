@@ -44,7 +44,9 @@ module.exports = (app) => {
   app.get("/usuarios/nome/:nome", (req, res) => {
     const nome = req.params.nome;
     Usuarios.buscarPorNome(nome)
-      .then((nome) => (nome ? res.json(nome) : res.status(404).end()))
+      .then((resultado) =>
+        resultado ? res.json(resultado) : res.status(404).end()
+      )
       .catch((erros) => res.status(400).json(erros));
   });
 

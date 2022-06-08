@@ -18,9 +18,8 @@ class Eventos {
     );
 
     if (!dataEventoEhValida) {
-      return new Promise((reject) =>
-        reject({ erro: "Evento com datas inválidas" })
-      );
+      const reject = { erro: "Evento com datas inválidas" };
+      return new Promise(reject);
     }
 
     return repositorio.adicionar(evento);
@@ -40,6 +39,7 @@ class Eventos {
   }
 
   buscaPorStatus(status) {
+    const reject = { erro: `O Status ${status} não é válido` };
     switch (status) {
       case STATUS_AGENDADO:
         return repositorio.buscarEventosAgendado();
@@ -48,9 +48,7 @@ class Eventos {
       case STATUS_FINALIZADO:
         return repositorio.buscarEventosFinalizado();
       default:
-        return new Promise((reject) =>
-          reject({ erro: `O Status ${status} não é válido` })
-        );
+        return new Promise(reject);
     }
   }
 
