@@ -102,13 +102,13 @@ describe("API Eventos", () => {
   test("Buscar Evento por Id Existente", async () => {
     const res = await request.get("/eventos/1");
     expect(res.body).toEqual({
+      dataFim: "2022-06-24",
+      dataInicio: "2022-06-11",
+      descricao: "primeiro evento",
       id: 1,
       nome: "evento1",
-      descricao: "primeiro evento",
-      urlFoto: null,
-      dataInicio: "2022-06-11",
-      dataFim: "2022-06-24",
       status: "agendado",
+      urlFoto: null,
     });
     expect(res.statusCode).toBe(200);
   });
@@ -137,13 +137,13 @@ describe("API Eventos", () => {
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual([
       {
-        id: 3,
-        nome: "lucas lucas",
-        descricao: "5252525252",
-        urlFoto: null,
-        dataInicio: "2022-05-01",
-        dataFim: "2022-05-07",
+        dataFim: "2022-12-31",
+        dataInicio: "2022-01-01",
+        descricao: "segundo evento",
+        id: 2,
+        nome: "evento2",
         status: "em-andamento",
+        urlFoto: null,
       },
     ]);
   });
@@ -152,13 +152,13 @@ describe("API Eventos", () => {
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual([
       {
-        id: 2,
-        nome: "evento2",
-        descricao: "segundo evento",
-        urlFoto: null,
-        dataInicio: "2022-01-01",
-        dataFim: "2022-12-31",
+        dataFim: "2022-05-07",
+        dataInicio: "2022-05-01",
+        descricao: "5252525252",
+        id: 3,
+        nome: "lucas lucas",
         status: "finalizado",
+        urlFoto: null,
       },
     ]);
   });
