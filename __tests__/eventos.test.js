@@ -8,35 +8,7 @@ describe("API Eventos", () => {
   test("Listar Eventos", async () => {
     const res = await request.get("/eventos");
     expect(res.statusCode).toBe(200);
-    expect(res.body).toEqual([
-      {
-        dataFim: "2022-12-31",
-        dataInicio: "2022-01-01",
-        descricao: "primeiro evento",
-        id: 1,
-        nome: "evento1",
-        status: "em-andamento",
-        urlFoto: null,
-      },
-      {
-        dataFim: "2022-12-31",
-        dataInicio: "2022-01-01",
-        descricao: "segundo evento",
-        id: 2,
-        nome: "evento2",
-        status: "agendado",
-        urlFoto: null,
-      },
-      {
-        dataFim: "2022-05-07",
-        dataInicio: "2022-05-01",
-        descricao: "5252525252",
-        id: 3,
-        nome: "lucas lucas",
-        status: "finalizado",
-        urlFoto: null,
-      },
-    ]);
+    expect(res.body).toEqual([]);
   });
 
   test("Adicionar Evento", async () => {
