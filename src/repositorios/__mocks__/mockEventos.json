@@ -5,7 +5,7 @@
     "descricao": "primeiro evento",
     "id": 1,
     "nome": "evento1",
-    "status": "agendado",
+    "status": "em-andamento",
     "urlFoto": null
   },
   {
@@ -14,7 +14,7 @@
     "descricao": "segundo evento",
     "id": 2,
     "nome": "evento2",
-    "status": "em-andamento",
+    "status": "agendado",
     "urlFoto": null
   },
   {
