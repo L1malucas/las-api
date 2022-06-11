@@ -19,8 +19,8 @@ describe("API Eventos", () => {
         urlFoto: null,
       },
       {
-        dataFim: "2022-06-24",
-        dataInicio: "2022-06-11",
+        dataFim: "2022-12-31",
+        dataInicio: "2022-01-01",
         descricao: "segundo evento",
         id: 2,
         nome: "evento2",
