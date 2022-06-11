@@ -6,11 +6,13 @@ class UFs {
   }
 
   buscaCidade(cidade) {
-    return Promise.resolve((ufsMock.cidade = { cidade }));
+    const busca = (ufsMock.cidade = { cidade });
+    return Promise.resolve(busca);
   }
 
   buscaSigla(sigla) {
-    return Promise.resolve((ufsMock.sigla = { sigla }));
+    const busca = (ufsMock.sigla = { sigla });
+    return Promise.resolve(busca);
   }
 }
 
