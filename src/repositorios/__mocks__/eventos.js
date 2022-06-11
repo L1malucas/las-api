@@ -1,6 +1,6 @@
 const eventosMock = require("./mockEventos.json");
 
-class TiposVendas {
+class Eventos {
   listar() {
     return Promise.resolve(eventosMock);
   }
@@ -39,4 +39,4 @@ class TiposVendas {
   }
 }
 
-module.exports = new TiposVendas();
+module.exports = new Eventos();

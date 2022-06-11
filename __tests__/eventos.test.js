@@ -10,8 +10,8 @@ describe("API Eventos", () => {
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual([
       {
-        dataFim: "2022-06-24",
-        dataInicio: "2022-06-11",
+        dataFim: "2022-12-31",
+        dataInicio: "2022-01-01",
         descricao: "primeiro evento",
         id: 1,
         nome: "evento1",
@@ -19,8 +19,8 @@ describe("API Eventos", () => {
         urlFoto: null,
       },
       {
-        dataFim: "2022-12-31",
-        dataInicio: "2022-01-01",
+        dataFim: "2022-06-24",
+        dataInicio: "2022-06-11",
         descricao: "segundo evento",
         id: 2,
         nome: "evento2",
@@ -124,9 +124,9 @@ describe("API Eventos", () => {
       {
         dataFim: "2022-12-31",
         dataInicio: "2022-01-01",
-        descricao: "segundo evento",
-        id: 2,
-        nome: "evento2",
+        descricao: "primeiro evento",
+        id: 1,
+        nome: "evento1",
         status: "agendado",
         urlFoto: null,
       },
@@ -139,9 +139,9 @@ describe("API Eventos", () => {
       {
         dataFim: "2022-06-24",
         dataInicio: "2022-06-11",
-        descricao: "primeiro evento",
-        id: 1,
-        nome: "evento1",
+        descricao: "segundo evento",
+        id: 2,
+        nome: "evento2",
         status: "em-andamento",
         urlFoto: null,
       },
